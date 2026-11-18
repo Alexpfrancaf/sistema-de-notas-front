@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <div class="container">
+        <form id="formCadastro" class="login-box">
+            <h1>Cadastre-se</h1>
+            <h2>Crie suas notas</h2>
+            <p id="erroCadastro" class="error"></p>
+
+            <input type="email" id="email" placeholder="Seu E-mail">
+            <input type="text" id="nome" placeholder="Nome Completo">
+            
+            <div class="campo-senha">
+    <input type="password" id="senha" placeholder="Sua Senha">
+    <i class="fa-solid fa-eye" onclick="mostrarSenha(this)"></i>
+            </div>
+
+            <button type="submit">Cadastre-se</button>
+            <h2>Já tem uma conta? <a href="index.html">Entrar</a></h2>
+        </form>
+    </div>
+
+    <script>
+        function mostrarSenha(icone) {
+            const campo = document.getElementById("senha");
+            if (campo.type === "password") {
+                campo.type = "text";
+                icone.classList.remove("fa-eye");
+                icone.classList.add("fa-eye-slash");
+            } else {
+                campo.type = "password";
+                icone.classList.remove("fa-eye-slash");
+                icone.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script src="Js/cadastro.js"></script>
+</body>
+</html>
