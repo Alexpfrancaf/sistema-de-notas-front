@@ -12,7 +12,7 @@ const nomeUsuario   = document.getElementById("nomeUsuario");
 
 // Lista notas do usuário logado
 async function renderizarNotas() {
-  const resposta = await fetch("http://localhost:8000/backend/Api/listar_notas.php");
+  const resposta = await fetch("backend/Api/listar_notas.php");
 
   // console.log("Status da resposta:", resposta);
 
