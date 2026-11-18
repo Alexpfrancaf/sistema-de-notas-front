@@ -24,7 +24,7 @@ formLogin.addEventListener("submit", async function (event) {
     }
 
     try {
-        const resposta = await fetch("http://localhost:8000/backend/Api/login.php", {
+        const resposta = await fetch("backend/Api/login.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, senha }),
