@@ -34,7 +34,7 @@ formCadastro.addEventListener("submit", async function (event) {
   }
 
   try {
-    const resposta = await fetch("http://localhost:8000/backend/Api/cadastro.php", {
+    const resposta = await fetch("backend/Api/cadastro.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nome, email, senha }),
